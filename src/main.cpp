@@ -3,9 +3,12 @@
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
-
+	sf::Texture texture;
+	if (!texture.loadFromFile("../assets/character.png"))
+	{
+		return EXIT_FAILURE;
+	}
+	sf::Sprite sprite(texture);
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -16,10 +19,8 @@ int main()
 		}
 
 		window.clear(sf::Color::Black);
-		// window.draw(shape);
-		sf::RectangleShape rectangle(sf::Vector2f(128.0f, 128.0f));
-		rectangle.setFillColor(sf::Color::Red);
-		rectangle.setPosition(320, 240);
+
+		window.draw(sprite);
 		window.display();
 	}
 
