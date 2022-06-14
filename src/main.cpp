@@ -15,8 +15,11 @@ int main()
 				window.close();
 		}
 
-		window.clear();
-		window.draw(shape);
+		window.clear(sf::Color::Black);
+		// window.draw(shape);
+		sf::RectangleShape rectangle(sf::Vector2f(128.0f, 128.0f));
+		rectangle.setFillColor(sf::Color::Red);
+		rectangle.setPosition(320, 240);
 		window.display();
 	}
 
