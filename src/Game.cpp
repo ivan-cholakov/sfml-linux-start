@@ -4,7 +4,7 @@ Game::Game() : m_window("Window", sf::Vector2u(800, 600))
 {
   m_characterTeture.loadFromFile("../assets/character.png");
   m_character.setTexture(m_characterTeture);
-  m_increment = sf::Vector2i(4, 4);
+  m_increment = sf::Vector2i(400, 400);
 }
 
 Game::~Game() {}
@@ -14,6 +14,9 @@ void Game::Update()
   m_window.Update();
   MoveSprite();
 }
+
+sf::Time Game::GetElapsed() { return m_elapsed; }
+void Game::RestartClock() { m_elapsed = m_clock.restart(); }
 
 void Game::MoveSprite()
 {
@@ -30,7 +33,9 @@ void Game::MoveSprite()
     m_increment.y = -m_increment.y;
   }
 
-  m_character.setPosition(m_character.getPosition().x + m_increment.x, m_character.getPosition().y + m_increment.y);
+  float fElapsed = m_elapsed.asSeconds();
+
+  m_character.setPosition(m_character.getPosition().x + (m_increment.x * fElapsed), m_character.getPosition().y + (m_increment.y * fElapsed));
 }
 
 void Game::Render()
