@@ -1,25 +1,28 @@
+#pragma once
 #include "Window.h"
+#include "EventManager.h"
+#include <iostream>
+
 class Game
 {
 public:
   Game();
   ~Game();
 
-  void HandleInput();
   void Update();
   void Render();
-  Window *GetWindow();
 
   sf::Time GetElapsed();
   void RestartClock();
 
-private:
-  void MoveSprite();
-  Window m_window;
-  sf::Clock m_clock;
-  sf::Time m_elapsed;
+  void MoveSprite(EventDetails *l_details);
 
-  sf::Texture m_characterTeture;
-  sf::Sprite m_character;
-  sf::Vector2i m_increment;
+  Window *GetWindow();
+
+private:
+  Window m_window;
+  sf::Clock Clock;
+
+  sf::Texture m_texture;
+  sf::Sprite m_sprite;
 };
