@@ -12,7 +12,7 @@ Game::Game() : m_window("Chapter 4", sf::Vector2u(800, 600))
   Clock.restart();
   srand(time(nullptr));
 
-  m_texture.loadFromFile("Mushroom.png");
+  m_texture.loadFromFile("../assets/character.png");
   m_sprite.setTexture(m_texture);
   m_sprite.setOrigin(m_texture.getSize().x / 2, m_texture.getSize().y / 2);
   m_sprite.setPosition(0, 0);

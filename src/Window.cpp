@@ -1,4 +1,5 @@
 #include "Window.h"
+#include <iostream>
 
 Window::Window()
 {
@@ -75,6 +76,7 @@ void Window::Update()
       m_isFocused = true;
       m_eventManager.SetFocus(true);
     }
+    std::cout << "Event: " << event.type << std::endl;
     m_eventManager.HandleEvent(event);
   }
 
