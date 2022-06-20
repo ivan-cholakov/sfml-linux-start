@@ -6,7 +6,6 @@
 #include "State_Game.h"
 #include "State_Paused.h"
 #include "SharedContext.h"
-#include "BaseState.h"
 
 enum class StateType
 {

@@ -1,5 +1,7 @@
 #include "StateManager.h"
-StateManager::StateManager(SharedContext *l_shared) : m_shared(l_shared)
+
+StateManager::StateManager(SharedContext *l_shared)
+    : m_shared(l_shared)
 {
   RegisterState<State_Intro>(StateType::Intro);
   RegisterState<State_MainMenu>(StateType::MainMenu);
@@ -13,38 +15,6 @@ StateManager::~StateManager()
   {
     itr.second->OnDestroy();
     delete itr.second;
-  }
-}
-
-void StateManager::Draw()
-{
-  if (m_states.empty())
-  {
-    return;
-  }
-
-  if (m_states.back().second->IsTransparent() && m_states.size() > 1)
-  {
-    auto itr = m_states.end();
-    while (itr != m_states.begin())
-    {
-      if (itr != m_states.end())
-      {
-        if (!itr->second->IsTransparent())
-        {
-          break;
-        }
-      }
-      --itr;
-    }
-    for (; itr != m_states.end(); ++itr)
-    {
-      itr->second->Draw();
-    }
-  }
-  else
-  {
-    m_states.back().second->Draw();
   }
 }
 
@@ -79,11 +49,43 @@ void StateManager::Update(const sf::Time &l_time)
   }
 }
 
+void StateManager::Draw()
+{
+  if (m_states.empty())
+  {
+    return;
+  }
+  if (m_states.back().second->IsTransparent() && m_states.size() > 1)
+  {
+    auto itr = m_states.end();
+    while (itr != m_states.begin())
+    {
+      if (itr != m_states.end())
+      {
+        if (!itr->second->IsTransparent())
+        {
+          break;
+        }
+      }
+      --itr;
+    }
+    for (; itr != m_states.end(); ++itr)
+    {
+      itr->second->Draw();
+    }
+  }
+  else
+  {
+    m_states.back().second->Draw();
+  }
+}
+
 SharedContext *StateManager::GetContext() { return m_shared; }
 
 bool StateManager::HasState(const StateType &l_type)
 {
-  for (auto itr = m_states.begin(); itr != m_states.end(); ++itr)
+  for (auto itr = m_states.begin();
+       itr != m_states.end(); ++itr)
   {
     if (itr->first == l_type)
     {
@@ -95,18 +97,14 @@ bool StateManager::HasState(const StateType &l_type)
       return false;
     }
   }
-}
-
-void StateManager::Remove(const StateType &l_type)
-{
-  m_toRemove.push_back(l_type);
+  return false;
 }
 
 void StateManager::ProcessRequests()
 {
   while (m_toRemove.begin() != m_toRemove.end())
   {
-    RemoveState(m_toRemove.front());
+    RemoveState(*m_toRemove.begin());
     m_toRemove.erase(m_toRemove.begin());
   }
 }
@@ -114,7 +112,8 @@ void StateManager::ProcessRequests()
 void StateManager::SwitchTo(const StateType &l_type)
 {
   m_shared->m_eventManager->SetCurrentState(l_type);
-  for (auto itr = m_states.begin(); itr != m_states.end(); ++itr)
+  for (auto itr = m_states.begin();
+       itr != m_states.end(); ++itr)
   {
     if (itr->first == l_type)
     {
@@ -128,12 +127,18 @@ void StateManager::SwitchTo(const StateType &l_type)
     }
   }
 
+  // State with l_type wasn't found.
   if (!m_states.empty())
   {
     m_states.back().second->Deactivate();
   }
   CreateState(l_type);
   m_states.back().second->Activate();
+}
+
+void StateManager::Remove(const StateType &l_type)
+{
+  m_toRemove.push_back(l_type);
 }
 
 void StateManager::CreateState(const StateType &l_type)
@@ -150,7 +155,8 @@ void StateManager::CreateState(const StateType &l_type)
 
 void StateManager::RemoveState(const StateType &l_type)
 {
-  for (auto itr = m_states.begin(); itr != m_states.end(); ++itr)
+  for (auto itr = m_states.begin();
+       itr != m_states.end(); ++itr)
   {
     if (itr->first == l_type)
     {

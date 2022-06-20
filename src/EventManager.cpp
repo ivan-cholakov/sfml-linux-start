@@ -1,13 +1,16 @@
 #include "EventManager.h"
-#include <iostream>
-EventManager::EventManager() : m_hasFocus(true) { LoadBindings(); }
+
+EventManager::EventManager()
+    : m_currentState(StateType(0)), m_hasFocus(true)
+{
+  LoadBindings();
+}
 
 EventManager::~EventManager()
 {
   for (auto &itr : m_bindings)
   {
     delete itr.second;
-    itr.second = nullptr;
   }
 }
 
@@ -29,6 +32,11 @@ bool EventManager::RemoveBinding(std::string l_name)
   delete itr->second;
   m_bindings.erase(itr);
   return true;
+}
+
+void EventManager::SetCurrentState(StateType l_state)
+{
+  m_currentState = l_state;
 }
 
 void EventManager::SetFocus(const bool &l_focus) { m_hasFocus = l_focus; }
@@ -73,6 +81,7 @@ void EventManager::HandleEvent(sf::Event &l_event)
             bind->m_details.m_keyCode = e_itr.second.m_code;
           }
           ++(bind->c);
+          break;
         }
       }
       else
@@ -204,9 +213,9 @@ void EventManager::LoadBindings()
       EventType type = EventType(stoi(keyval.substr(start, end - start)));
       int code = stoi(keyval.substr(end + delimiter.length(),
                                     keyval.find(delimiter, end + delimiter.length())));
+
       EventInfo eventInfo;
       eventInfo.m_code = code;
-
       bind->BindEvent(type, eventInfo);
     }
 
