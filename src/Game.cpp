@@ -1,39 +1,37 @@
 #include "Game.h"
 
-void Game::MoveSprite(EventDetails *l_details)
+Game::Game() : m_window("Handmade Engine", sf::Vector2u(800, 600)), m_stateManager(&m_context)
 {
-  sf::Vector2i mousepos = m_window.GetEventManager()->GetMousePos(m_window.GetRenderWindow());
-  m_sprite.setPosition(mousepos.x, mousepos.y);
-  std::cout << "Moving sprite to: " << mousepos.x << ":" << mousepos.y << std::endl;
-}
-
-Game::Game() : m_window("Chapter 4", sf::Vector2u(800, 600))
-{
-  Clock.restart();
+  m_clock.restart();
   srand(time(nullptr));
 
-  m_texture.loadFromFile("../assets/character.png");
-  m_sprite.setTexture(m_texture);
-  m_sprite.setOrigin(m_texture.getSize().x / 2, m_texture.getSize().y / 2);
-  m_sprite.setPosition(0, 0);
+  m_context.m_wind = &m_window;
+  m_context.m_eventManager = m_window.GetEventManager();
 
-  m_window.GetEventManager()->AddCallback("Move", &Game::MoveSprite, this);
+  m_stateManager.SwitchTo(StateType::Intro);
 }
 
 Game::~Game() {}
 
-sf::Time Game::GetElapsed() { return Clock.getElapsedTime(); }
-void Game::RestartClock() { Clock.restart(); }
+sf::Time Game::GetElapsed() { return m_clock.getElapsedTime(); }
+void Game::RestartClock() { m_elapsed = m_clock.restart(); }
 Window *Game::GetWindow() { return &m_window; }
 
 void Game::Update()
 {
   m_window.Update();
+  m_stateManager.Update(m_elapsed);
 }
 
 void Game::Render()
 {
   m_window.BeginDraw();
-  m_window.GetRenderWindow()->draw(m_sprite);
+  m_stateManager.Draw();
   m_window.EndDraw();
+}
+
+void Game::LateUpdate()
+{
+  m_stateManager.ProcessRequests();
+  RestartClock();
 }
