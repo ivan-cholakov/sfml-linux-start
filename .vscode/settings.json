@@ -6,6 +6,7 @@
     "*.tcc": "cpp",
     "iostream": "cpp",
     "unordered_map": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "new": "cpp"
   }
 }
