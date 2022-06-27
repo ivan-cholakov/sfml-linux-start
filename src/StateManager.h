@@ -17,8 +17,11 @@ enum class StateType
   Credits
 };
 
+// State container.
 using StateContainer = std::vector<std::pair<StateType, BaseState *>>;
+// Type container.
 using TypeContainer = std::vector<StateType>;
+// State factory.
 using StateFactory = std::unordered_map<StateType, std::function<BaseState *(void)>>;
 
 class StateManager
@@ -39,6 +42,7 @@ public:
   void Remove(const StateType &l_type);
 
 private:
+  // Methods.
   void CreateState(const StateType &l_type);
   void RemoveState(const StateType &l_type);
 
@@ -51,6 +55,7 @@ private:
     };
   }
 
+  // Members.
   SharedContext *m_shared;
   StateContainer m_states;
   TypeContainer m_toRemove;

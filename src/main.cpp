@@ -2,6 +2,7 @@
 
 int main(int argc, char *argv[])
 {
+	// Program entry point.
 	Game game;
 	while (!game.GetWindow()->IsDone())
 	{
@@ -9,5 +10,4 @@ int main(int argc, char *argv[])
 		game.Render();
 		game.LateUpdate();
 	}
-	return 0;
 }

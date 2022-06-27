@@ -1,6 +1,5 @@
 #include "Game.h"
-
-Game::Game() : m_window("Handmade Engine", sf::Vector2u(800, 600)), m_stateManager(&m_context)
+Game::Game() : m_window("Chapter 5", sf::Vector2u(800, 600)), m_stateManager(&m_context)
 {
   m_clock.restart();
   srand(time(nullptr));
@@ -26,6 +25,7 @@ void Game::Update()
 void Game::Render()
 {
   m_window.BeginDraw();
+  // Render here.
   m_stateManager.Draw();
   m_window.EndDraw();
 }

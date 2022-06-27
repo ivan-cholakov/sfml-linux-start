@@ -50,7 +50,7 @@ struct EventDetails
   sf::Uint32 m_textEntered;
   sf::Vector2i m_mouse;
   int m_mouseWheelDelta;
-  int m_keyCode;
+  int m_keyCode; // Single key code.
 
   void Clear()
   {
@@ -75,13 +75,15 @@ struct Binding
 
   Events m_events;
   std::string m_name;
-  int c;
+  int c; // Count of events that are "happening".
 
   EventDetails m_details;
 };
 
 using Bindings = std::unordered_map<std::string, Binding *>;
+// Callback container.
 using CallbackContainer = std::unordered_map<std::string, std::function<void(EventDetails *)>>;
+// State callback container.
 enum class StateType;
 using Callbacks = std::unordered_map<StateType, CallbackContainer>;
 
@@ -97,6 +99,7 @@ public:
   void SetCurrentState(StateType l_state);
   void SetFocus(const bool &l_focus);
 
+  // Needs to be defined in the header!
   template <class T>
   bool AddCallback(StateType l_state, const std::string &l_name,
                    void (T::*l_func)(EventDetails *), T *l_instance)
@@ -125,6 +128,7 @@ public:
   void HandleEvent(sf::Event &l_event);
   void Update();
 
+  // Getters.
   sf::Vector2i GetMousePos(sf::RenderWindow *l_wind = nullptr)
   {
     return (l_wind ? sf::Mouse::getPosition(*l_wind) : sf::Mouse::getPosition());

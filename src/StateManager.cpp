@@ -141,6 +141,8 @@ void StateManager::Remove(const StateType &l_type)
   m_toRemove.push_back(l_type);
 }
 
+// Private methods.
+
 void StateManager::CreateState(const StateType &l_type)
 {
   auto newState = m_stateFactory.find(l_type);

@@ -6,12 +6,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 17 21:07:44 2022
+# Make data base, printed on Mon Jun 27 19:18:00 2022
 
 # Variables
 
-# environment
-TMUX_PANE = %0
 # environment
 GDK_BACKEND = x11
 # environment
@@ -19,11 +17,13 @@ LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1ef34ca2-dcb6-43ca-b02e-33f0caac0cc0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-12662140-8786-4b33-92dd-c36e998b26ed.sock
 # environment
-VSCODE_CWD = /home/ivancholakov/workspace/sfml-linux-start
+VSCODE_CWD = /home/ivancholakov/workspace
 # environment
 WINDOWPATH = 2
+# environment
+NVM_DIR = /home/ivancholakov/.nvm
 # environment
 GDM_LANG = en_US.UTF-8
 # default
@@ -51,7 +51,9 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/ivancholakov/.config/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+NVM_INC = /home/ivancholakov/.nvm/versions/node/v17.9.1/include/node
+# environment
+VSCODE_CODE_CACHE_PATH = /home/ivancholakov/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LANG = C
 # environment
@@ -63,7 +65,7 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 # makefile (from 'Makefile', line 51)
 CMAKE_COMMAND = /usr/bin/cmake
 # environment
-GNOME_TERMINAL_SERVICE = :1.129
+GNOME_TERMINAL_SERVICE = :1.587
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -83,6 +85,8 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # default
 .SHELLFLAGS := -c
 # environment
+NVM_BIN = /home/ivancholakov/.nvm/versions/node/v17.9.1/bin
+# environment
 HISTSIZE = 1000
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -97,17 +101,15 @@ CMAKE_BINARY_DIR = /home/ivancholakov/workspace/sfml-linux-start
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 10421
+VSCODE_PID = 376229
 # environment
 XDG_SESSION_TYPE = x11
-# environment
-TMUX = /tmp/tmux-1000/default,10382,0
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from 'Makefile', line 60)
 CMAKE_SOURCE_DIR = /home/ivancholakov/workspace/sfml-linux-start
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1809,unix/unix:/tmp/.ICE-unix/1809
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/214850,unix/unix:/tmp/.ICE-unix/214850
 # automatic
 *F = $(notdir $*)
 # environment
@@ -127,15 +129,15 @@ MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
 # environment
-SHLVL = 3
+SHLVL = 2
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/f6912559_cdd5_4465_9927_68b031350ea6
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ace290a1_c618_414a_a5d4_7906b9ef583b
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin
+PATH = /home/ivancholakov/.nvm/versions/node/v17.9.1/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin
 # environment
 MOZ_GMP_PATH = /usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
 # default
@@ -146,8 +148,6 @@ MAKEFILES :=
 VSCODE_LOG_NATIVE = false
 # environment
 USERNAME = ivancholakov
-# environment
-TERM_PROGRAM = tmux
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -169,7 +169,7 @@ LOGNAME = ivancholakov
 # makefile
 .DEFAULT_GOAL := default_target
 # environment
-SYSTEMD_EXEC_PID = 1851
+SYSTEMD_EXEC_PID = 214889
 # makefile (from 'Makefile', line 54)
 RM = /usr/bin/cmake -E rm -f
 # environment
@@ -187,7 +187,7 @@ which_declare = typeset -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-SSH_AGENT_PID = 1772
+SSH_AGENT_PID = 214813
 # makefile (from 'Makefile', line 35)
 MAKESILENT = -s
 # environment
@@ -196,6 +196,8 @@ _ = /usr/bin/make
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 COLORTERM = truecolor
+# environment
+NVM_CD_FLAGS = -q
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -207,9 +209,9 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1d4e5c3a-1.68.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1d4e5c3a-1.68.1-main.sock
 # environment
-TERM = screen
+TERM = xterm-256color
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -227,8 +229,6 @@ VTE_VERSION = 6800
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
-TERM_PROGRAM_VERSION = 3.2a
-# environment
 GDMSESSION = gnome
 # variable set hash-table stats:
 # Load=110/1024=11%, Rehash=0, Collisions=11/149=7%
@@ -241,9 +241,9 @@ GDMSESSION = gnome
 
 # RCS: could not be stat'd.
 # SCCS: could not be stat'd.
-# . (device 40, inode 70692): 18 files, no impossibilities.
+# . (device 40, inode 70692): 19 files, no impossibilities.
 
-# 18 files, no impossibilities in 3 directories.
+# 19 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -262,12 +262,20 @@ GDMSESSION = gnome
 # 6 implicit rules, 0 (0.0%) terminal.
 # Files
 
+src/EventManager.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 145):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/EventManager.cpp.i
+
 src/main.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 193):
+#  recipe to execute (from 'Makefile', line 337):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/main.cpp.i
 
 src/Game.s: src/Game.cpp.s
@@ -276,13 +284,13 @@ src/Game.s: src/Game.cpp.s
 #  File does not exist.
 #  File has not been updated.
 
+ 
 src/main.i: src/main.cpp.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
- 
 depend:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -290,6 +298,28 @@ depend:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 116):
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+
+src/StateManager.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 185):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/StateManager.cpp.o
+
+src/StateManager.i: src/StateManager.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/EventManager.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 137):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/EventManager.cpp.o
 
 src/main.s: src/main.cpp.s
 #  Phony target (prerequisite of .PHONY).
@@ -303,11 +333,49 @@ src/Game.i: src/Game.cpp.i
 #  File does not exist.
 #  File has not been updated.
 
+src/State_Game.i: src/State_Game.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_Game.s: src/State_Game.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
 default_target: all
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+
+src/State_MainMenu.s: src/State_MainMenu.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_Intro.s: src/State_Intro.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/EventManager.o: src/EventManager.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_MainMenu.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 257):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_MainMenu.cpp.o
 
 src/Window.i: src/Window.cpp.i
 #  Phony target (prerequisite of .PHONY).
@@ -326,13 +394,35 @@ src/Game.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 153):
+#  recipe to execute (from 'Makefile', line 177):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/Game.cpp.s
+
+src/State_MainMenu.o: src/State_MainMenu.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_Game.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 225):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Game.cpp.s
+
+src/State_Paused.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 297):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Paused.cpp.s
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-15 08:35:13.494677436
+#  Last modified 2022-06-20 19:37:54.728199334
 #  File has been updated.
 #  Successfully updated.
 
@@ -345,6 +435,18 @@ rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
 	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 
+src/State_Game.o: src/State_Game.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/EventManager.i: src/EventManager.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
 sfml-linux-start: cmake_check_build_system
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -356,6 +458,12 @@ sfml-linux-start: cmake_check_build_system
 .SILENT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+#  File has not been updated.
+
+src/StateManager.o: src/StateManager.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
 #  File has not been updated.
 
 clean:
@@ -383,7 +491,7 @@ src/Game.cpp.i:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 145):
+#  recipe to execute (from 'Makefile', line 169):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/Game.cpp.i
 
 preinstall/fast:
@@ -399,7 +507,7 @@ src/Window.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 177):
+#  recipe to execute (from 'Makefile', line 321):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/Window.cpp.s
 
 edit_cache:
@@ -411,7 +519,25 @@ edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
 	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 
+src/State_Paused.o: src/State_Paused.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
 rebuild_cache/fast: rebuild_cache
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_MainMenu.i: src/State_MainMenu.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_Intro.i: src/State_Intro.cpp.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -423,6 +549,22 @@ rebuild_cache/fast: rebuild_cache
 #  Modification time never checked.
 #  File has not been updated.
 
+src/State_Intro.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 233):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Intro.cpp.o
+
+src/StateManager.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/StateManager.cpp.i
+
 sfml-linux-start/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -430,6 +572,14 @@ sfml-linux-start/fast:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 129):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/build
+
+src/State_Game.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 209):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Game.cpp.o
 
 preinstall: all
 #  Phony target (prerequisite of .PHONY).
@@ -444,10 +594,17 @@ src/Window.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 161):
+#  recipe to execute (from 'Makefile', line 305):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/Window.cpp.o
 
 src/main.o: src/main.cpp.o
+#  Phony target (prerequisite of .PHONY).
+ 
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_Paused.s: src/State_Paused.cpp.s
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -478,7 +635,7 @@ help:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 206):
+#  recipe to execute (from 'Makefile', line 350):
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
@@ -486,9 +643,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sfml-linux-start"
+	@echo "... src/EventManager.o"
+	@echo "... src/EventManager.i"
+	@echo "... src/EventManager.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/StateManager.o"
+	@echo "... src/StateManager.i"
+	@echo "... src/StateManager.s"
+	@echo "... src/State_Game.o"
+	@echo "... src/State_Game.i"
+	@echo "... src/State_Game.s"
+	@echo "... src/State_Intro.o"
+	@echo "... src/State_Intro.i"
+	@echo "... src/State_Intro.s"
+	@echo "... src/State_MainMenu.o"
+	@echo "... src/State_MainMenu.i"
+	@echo "... src/State_MainMenu.s"
+	@echo "... src/State_Paused.o"
+	@echo "... src/State_Paused.i"
+	@echo "... src/State_Paused.s"
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"
@@ -496,11 +671,41 @@ help:
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 
+src/State_Intro.o: src/State_Intro.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
 clean/fast: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+
+src/State_Paused.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 289):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Paused.cpp.i
+
+src/State_Game.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 217):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Game.cpp.i
+
+src/StateManager.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 201):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/StateManager.cpp.s
 
 src/Window.s: src/Window.cpp.s
 #  Phony target (prerequisite of .PHONY).
@@ -508,10 +713,46 @@ src/Window.s: src/Window.cpp.s
 #  File does not exist.
 #  File has not been updated.
 
+src/State_MainMenu.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 265):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_MainMenu.cpp.i
+
+src/StateManager.s: src/StateManager.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/EventManager.s: src/EventManager.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/State_MainMenu.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 273):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_MainMenu.cpp.s
+
 .NOTPARALLEL:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+src/State_Intro.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 241):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Intro.cpp.i
 
 cmake_check_build_system:
 #  Phony target (prerequisite of .PHONY).
@@ -538,8 +779,24 @@ cmake_check_build_system:
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  recipe to execute (from 'Makefile', line 233):
+#  recipe to execute (from 'Makefile', line 395):
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+
+src/State_Paused.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 281):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Paused.cpp.o
+
+src/EventManager.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 153):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/EventManager.cpp.s
 
 src/Game.o: src/Game.cpp.o
 #  Phony target (prerequisite of .PHONY).
@@ -552,7 +809,7 @@ src/main.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 185):
+#  recipe to execute (from 'Makefile', line 329):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/main.cpp.o
 
 .SUFFIXES: .hpux_make_needs_suffix_list
@@ -560,7 +817,21 @@ src/main.cpp.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-.PHONY: default_target cmake_force edit_cache edit_cache/fast rebuild_cache rebuild_cache/fast all clean clean/fast preinstall preinstall/fast depend sfml-linux-start sfml-linux-start/fast src/Game.o src/Game.cpp.o src/Game.i src/Game.cpp.i src/Game.s src/Game.cpp.s src/Window.o src/Window.cpp.o src/Window.i src/Window.cpp.i src/Window.s src/Window.cpp.s src/main.o src/main.cpp.o src/main.i src/main.cpp.i src/main.s src/main.cpp.s help cmake_check_build_system
+src/State_Intro.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 249):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/State_Intro.cpp.s
+
+src/State_Paused.i: src/State_Paused.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+.PHONY: default_target cmake_force edit_cache edit_cache/fast rebuild_cache rebuild_cache/fast all clean clean/fast preinstall preinstall/fast depend sfml-linux-start sfml-linux-start/fast src/EventManager.o src/EventManager.cpp.o src/EventManager.i src/EventManager.cpp.i src/EventManager.s src/EventManager.cpp.s src/Game.o src/Game.cpp.o src/Game.i src/Game.cpp.i src/Game.s src/Game.cpp.s src/StateManager.o src/StateManager.cpp.o src/StateManager.i src/StateManager.cpp.i src/StateManager.s src/StateManager.cpp.s src/State_Game.o src/State_Game.cpp.o src/State_Game.i src/State_Game.cpp.i src/State_Game.s src/State_Game.cpp.s src/State_Intro.o src/State_Intro.cpp.o src/State_Intro.i src/State_Intro.cpp.i src/State_Intro.s src/State_Intro.cpp.s src/State_MainMenu.o src/State_MainMenu.cpp.o src/State_MainMenu.i src/State_MainMenu.cpp.i src/State_MainMenu.s src/State_MainMenu.cpp.s src/State_Paused.o src/State_Paused.cpp.o src/State_Paused.i src/State_Paused.cpp.i src/State_Paused.s src/State_Paused.cpp.s src/Window.o src/Window.cpp.o src/Window.i src/Window.cpp.i src/Window.s src/Window.cpp.s src/main.o src/main.cpp.o src/main.i src/main.cpp.i src/main.s src/main.cpp.s help cmake_check_build_system
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -570,16 +841,15 @@ src/main.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 201):
+#  recipe to execute (from 'Makefile', line 345):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/main.cpp.s
 
 src/Window.cpp.i:
- 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 169):
+#  recipe to execute (from 'Makefile', line 313):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/Window.cpp.i
 
 src/Game.cpp.o:
@@ -587,23 +857,23 @@ src/Game.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 137):
+#  recipe to execute (from 'Makefile', line 161):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml-linux-start.dir/build.make CMakeFiles/sfml-linux-start.dir/src/Game.cpp.o
 
 # files hash-table stats:
-# Load=41/1024=4%, Rehash=0, Collisions=4/149=3%
+# Load=77/1024=8%, Rehash=0, Collisions=12/293=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 69 / storage = 799 B / avg = 11 B
-# current buf: size = 8162 B / used = 799 B / count = 69 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 106 / storage = 1556 B / avg = 14 B
+# current buf: size = 8162 B / used = 1556 B / count = 106 / avg = 14 B
 
-# strcache performance: lookups = 236 / hit rate = 70%
+# strcache performance: lookups = 435 / hit rate = 75%
 # hash-table stats:
-# Load=69/8192=1%, Rehash=0, Collisions=0/236=0%
-# Finished Make data base on Fri Jun 17 21:07:44 2022
+# Load=106/8192=1%, Rehash=0, Collisions=4/435=1%
+# Finished Make data base on Mon Jun 27 19:18:00 2022
 
  
